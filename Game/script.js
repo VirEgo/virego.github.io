@@ -18,10 +18,6 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
         document.getElementById('dice-2').src = 'img/dice-' + dice2 + '.png';
 
         
-//        var diceDOM = document.querySelector('.dice');
-//        diceDOM.style.display = 'block';
-//        diceDOM.src = 'img/dice-' + dice + '.png';
-//    
         //3.Update the round score IF the rolled number was NOT a 1
         if (dice1 !== 1 && dice2!==1){
             //Add score
@@ -78,14 +74,9 @@ function nextPlayer(){
         
         document.querySelector('.player-0-panel').classList.toggle('active');
         document.querySelector('.player-1-panel').classList.toggle('active');
-//        document.querySelector('.dice1').style.display = 'none';
-//        document.querySelector('.dice2').style.display = 'none';
         document.getElementById('dice-1').style.display = 'none';
         document.getElementById('dice-2').style.display = 'none';
     
-        //document.querySelector('.player-0-panel').classList.remove('active');
-        //document.querySelector('.player-1-panel').classList.add('active');
-        
 }
 
 
@@ -113,11 +104,3 @@ function init(){
     document.querySelector('.player-0-panel').classList.add('active');
     
 }
-
-
-//dice = Math.floor(Math.random() * 6) + 1;
-//document.querySelector('#current-' + activePlayer).textContent = dice;
-//
-//
-//var x = document.querySelector('#score-0').textContent;
-//console.log(x);
