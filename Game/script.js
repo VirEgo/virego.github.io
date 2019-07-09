@@ -1,17 +1,17 @@
-var scores, roundScore, activePlayer, gamePlaying, finalScore;
+let scores, roundScore, activePlayer, gamePlaying, finalScore;
 init();
 
-var diceTwo;
+let diceTwo;
 
 //document.querySelector('.dice').style.display = 'none';
 
 document.querySelector('.btn-roll').addEventListener('click', function(){
     if(gamePlaying) {
-        // 1. Random number
-        var dice1 = Math.floor(Math.random() * 6) + 1;
-        var dice2 = Math.floor(Math.random() * 6) + 1;
+        // Random number
+        let dice1 = Math.floor(Math.random() * 6) + 1;
+        let dice2 = Math.floor(Math.random() * 6) + 1;
     
-        // 2.Display the result
+        // Display the result
         document.getElementById('dice-1').style.display = 'block';
         document.getElementById('dice-2').style.display = 'block';
         document.getElementById('dice-1').src = 'img/dice-' + dice1 + '.png';
@@ -39,10 +39,10 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     //Update the UI
     document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
         
-        var input = document.querySelector('.final-score').value;
-        var winningScore;
+        let input = document.querySelector('.final-score').value;
+        let winningScore;
         
-        if(input){
+        if(input != 0){
             winningScore = input;
         } else {
             winningScore = 100;
