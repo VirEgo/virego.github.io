@@ -16,7 +16,7 @@ let input = document.querySelector('.final-score');
 var isNewGameStarting = false;
 
 function startGame() {
-	if (!validateValue(input.value)) {
+	if (input.value && !validateValue(input.value)) {
 		input.value = null;
 		return;
 	}
@@ -132,7 +132,7 @@ function nextPlayer() {
 	secondDice.style.display = 'none';
 }
 
-document.querySelector('.btn-new').addEventListener('click', init);
+// document.querySelector('.btn-new').addEventListener('click', init);
 
 function init() {
 	scores = [0, 0];
