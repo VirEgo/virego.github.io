@@ -13,7 +13,6 @@ const playgroundBanner = document.querySelector('.main-playfield');
 
 let input = document.querySelector('.final-score');
 
-init();
 var isNewGameStarting = false;
 
 function startGame() {
@@ -176,4 +175,7 @@ function validateValue(value) {
 	return true;
 }
 
-window.addEventListener('load', () => resetValues());
+window.addEventListener('load', () => {
+	resetValues();
+	init();
+});
